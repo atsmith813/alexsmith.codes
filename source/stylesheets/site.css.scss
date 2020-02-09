@@ -14,8 +14,13 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Work Sans', sans-serif;
 }
 
-.banner {
-  max-height: 100vh;
+.quote {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.section {
+  margin: 3em 0em;
 }
 
 #type-text {
@@ -39,6 +44,89 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
 }
 
+.intro-text,
+.contact-text,
+.about-me-text {
+  font-weight: normal;
+}
+
+.contact-text {
+  margin-top: 1.5em;
+}
+
+.social-media-icon-links {
+  a {
+    color: inherit;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  i {
+    margin: 0.5em;
+  }
+}
+
+.social-media-icon-links:hover a {
+  opacity: 0.3;
+}
+
+.social-media-icon-links:hover a:hover {
+  color: #FB0106FF;
+  opacity: 1;
+}
+
+.about-me-quote,
+.testimonial-quote {
+  font-style: italic;
+  i {
+    color: #B3B3B2FF;
+  }
+}
+
+.about-me-quote {
+  margin-top: 1.0em;
+}
+
+#justice-video iframe {
+  width: 100%;
+}
+
+.testimonial-quote {
+  margin-top: 2.0em;
+}
+
+.question {
+  font-weight: bold;
+}
+
+.table th {
+  border-top: none !important;
+}
+
+.graph {
+  width: 60%;
+  height: auto;
+}
+
+.role {
+  font-weight: 200;
+}
+
+.company {
+  font-weight: bold;
+}
+
+#resume-contact-btn {
+  margin-top: 2em;
+}
+
+p, table {
+  font-weight: 200;
+}
+
+ul, li {
+  font-weight: 200;
+}
 
 /* ------------------------------------------------------------------------- */
 /*|                               SIDEBAR                                   |*/
@@ -254,6 +342,12 @@ a.work-with-me:hover {
   #sidebarCollapse span:last-of-type {
     transform: rotate(-45deg) translate(1px, -1px);
   }
+
+  .graph {
+    width: 100%;
+    height: auto;
+  }
+
 }
 
 /* ------------------------------------------------------------------------- */
