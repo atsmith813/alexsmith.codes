@@ -35,6 +35,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Bangers';
 }
 
+.banner {
+  margin-top: 0;
+}
+
 .circle-image {
   height: auto;
   width: 50%;
@@ -300,7 +304,7 @@ a.work-with-me:hover {
 /* CONTENT STYLE */
 #content {
   width: calc(100% - 250px);
-  padding: 40px;
+  padding: 0px 40px 40px 40px;
   min-height: 100vh;
   transition: all 0.3s;
   position: absolute;
@@ -330,43 +334,27 @@ a.work-with-me:hover {
     width: calc(100% - 250px);
   }
 
-  #sidebarCollapse span {
-    //display: none;
-  }
-
-  /* Reversing the behavior of the bars:
-     Removing the rotation from the first,
-     last bars and reappear the second bar on default state,
-     and giving them a vertical margin */
-  #sidebarCollapse.active span:first-of-type,
-  #sidebarCollapse.active span:nth-of-type(2),
-  #sidebarCollapse.active span:last-of-type {
-    transform: none;
-    opacity: 1;
-    margin: 5px auto;
-  }
-
-  /* Removing the vertical margin and make the first and last bars rotate again
-  \  when the sidebar is open, hiding the second bar */
-  #sidebarCollapse span {
-    margin: 0 auto;
-  }
-
-  #sidebarCollapse span:first-of-type {
-    transform: rotate(45deg) translate(2px, 2px);
-  }
-
-  #sidebarCollapse span:nth-of-type(2) {
-    opacity: 0;
-  }
-
-  #sidebarCollapse span:last-of-type {
-    transform: rotate(-45deg) translate(1px, -1px);
+  #sidebarCollapse {
+    display: none;
   }
 
   .graph {
     width: 100%;
     height: auto;
+  }
+
+  .banner {
+    #intro-text,
+    #type-text,
+    #name-text {
+      font-size: 1.5rem;
+      padding: 0 10px;
+    }
+
+    #name {
+      font-size: 3rem;
+      padding: 0 5px;
+    }
   }
 
 }
