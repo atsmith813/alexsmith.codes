@@ -64,11 +64,7 @@
     %title Alex | Software Engineer
 
   %body
-    .wrapper
-      = partial 'partials/side_nav_bar'
-      #content.active
-        = partial 'partials/menu_btn'
-        = yield
-        -#= partial 'partials/footer'
-        -#= google_analytics_tag
+    = yield
+    -#= partial 'partials/footer'
+    -#= google_analytics_tag
 

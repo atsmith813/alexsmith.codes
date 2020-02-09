@@ -3,29 +3,20 @@
     %h3 Hello there, how are you?
   %ul.list-unstyled.components
     %li.active
-      %a.dropdown-toggle{ "aria-expanded" => "false", "data-toggle" => "collapse", :href => "#homeSubmenu" } Home
+      %a.dropdown-toggle{ "aria-expanded" => "false", "data-toggle" => "collapse", :href => "#homeSubmenu" } About
       %ul#homeSubmenu.collapse.list-unstyled
         %li
-          %a{ href: '#' } Home 1
+          %a{ href: '#about' } Summary
         %li
-          %a{ href: '#' } Home 2
+          %a{ href: '#past' } Past
         %li
-          %a{ href: '#' } Home 3
+          %a{ href: '#present' } Present
+        %li
+          %a{ href: '#future' } Future
     %li
-      %a{ href: '#' } About
+      %a{ href: '#interests' } Interests
     %li
-      %a.dropdown-toggle{ "aria-expanded" => "false", "data-toggle" => "collapse", :href => "#pageSubmenu" } Pages
-      %ul#pageSubmenu.collapse.list-unstyled
-        %li
-          %a{ href: '#' } Page 1
-        %li
-          %a{ href: '#' } Page 2
-        %li
-          %a{ href: '#' } Page 3
-    %li
-      %a{ href: '#' } Portfolio
-    %li
-      %a{ href: '#' } Contact
+      %a{ href: '#' } Resume / CV
   %ul.list-unstyled.CTAs
     %li
       %a.contact{ href: 'https://bootstrapious.com/tutorial/files/sidebar.zip' } Contact Me
