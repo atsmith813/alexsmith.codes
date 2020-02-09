@@ -1,5 +1,23 @@
 !!!
 %html{ lang: 'en' }
+  :plain
+    <!--
+         ___       _ ____           _ __  __     __               __
+        / _ )__ __(_) / /_  _    __(_) /_/ /    / /__ _  _____   / /  __ __
+       / _  / // / / / __/ | |/|/ / / __/ _ \  / / _ \ |/ / -_) / _ \/ // /
+      /____/\_,_/_/_/\__/  |__,__/_/\__/_//_/ /_/\___/___/\__/ /_.__/\_, /
+                                                                    /___/
+        _   _           ___       _ _   _
+       /_\ | |_____ __ / __|_ __ (_) |_| |_
+      / _ \| / -_) \ / \__ \ '  \| |  _| ' \
+     /_/ \_\_\___/_\_\ |___/_|_|_|_|\__|_||_|
+
+     * GitHub:  @atsmith813
+     * Website: https://alexsmith.codes & https://hirealexsmith.com
+     * Twitter: @atsmith813
+     * DEV:     https://dev.to/atsmith813
+     * Email:   workwithalexsmith@gmail.com
+    -->
   %head
     / Required meta tags
     %meta{ content: 'text/html; charset=UTF-8', 'http-equiv' => 'Content-Type' }
@@ -30,6 +48,7 @@
     %link{ crossorigin: 'anonymous', href: 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css', integrity: 'sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh', rel: 'stylesheet' }
     %link{ href: 'https://fonts.googleapis.com/css?family=Lato|Work+Sans', rel: 'stylesheet' }
     %link{ href: 'https://fonts.googleapis.com/css?family=Bangers&display=swap', rel: 'stylesheet' }
+    %link{ href: 'https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css', rel: 'stylesheet' }
     = stylesheet_link_tag 'site'
 
     / JS
@@ -38,13 +57,18 @@
     %script{ crossorigin: 'anonymous', integrity: 'sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6', src: 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js' }
     %script{ src: 'https://cdn.jsdelivr.net/npm/typeit@5.5.0/dist/typeit.min.js' }
     %script{ src: 'https://kit.fontawesome.com/fcbba1af21.js', crossorigin: 'anonymous' }
+    %script{ src: 'https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js' }
+
     = javascript_include_tag 'site'
 
-    %title Alex | Full-Stack Engineer
+    %title Alex | Software Engineer
 
   %body
-    .container
-      = yield
-      -#= partial 'partials/footer'
-      -#= google_analytics_tag
+    .wrapper
+      = partial 'partials/side_nav_bar'
+      #content.active
+        = partial 'partials/menu_btn'
+        = yield
+        -#= partial 'partials/footer'
+        -#= google_analytics_tag
 

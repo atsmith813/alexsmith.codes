@@ -1,0 +1,33 @@
+%nav#sidebar.active
+  .sidebar-header
+    %h3 Hello there, how are you?
+  %ul.list-unstyled.components
+    %li.active
+      %a.dropdown-toggle{ "aria-expanded" => "false", "data-toggle" => "collapse", :href => "#homeSubmenu" } Home
+      %ul#homeSubmenu.collapse.list-unstyled
+        %li
+          %a{ href: '#' } Home 1
+        %li
+          %a{ href: '#' } Home 2
+        %li
+          %a{ href: '#' } Home 3
+    %li
+      %a{ href: '#' } About
+    %li
+      %a.dropdown-toggle{ "aria-expanded" => "false", "data-toggle" => "collapse", :href => "#pageSubmenu" } Pages
+      %ul#pageSubmenu.collapse.list-unstyled
+        %li
+          %a{ href: '#' } Page 1
+        %li
+          %a{ href: '#' } Page 2
+        %li
+          %a{ href: '#' } Page 3
+    %li
+      %a{ href: '#' } Portfolio
+    %li
+      %a{ href: '#' } Contact
+  %ul.list-unstyled.CTAs
+    %li
+      %a.download{ href: 'https://bootstrapious.com/tutorial/files/sidebar.zip' } Download source
+    %li
+      %a.article{ href: 'https://bootstrapious.com/p/bootstrap-sidebar' } Back to article
