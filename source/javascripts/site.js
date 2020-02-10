@@ -55,4 +55,13 @@ $(document).ready(function() {
 
   // Hide menu button when page is scrolled
   $(window).scroll(navbarCollapse);
+
+  // Closes responsive menu when an item is clicked
+  // Adds active class to selected menu item
+  $('.nav-item').click(function() {
+    $('.nav-item').removeClass('active');
+    $(this).addClass('active');
+    $('.navbar-collapse').collapse('hide');
+  });
+
 });

@@ -1,7 +1,6 @@
 $dark-blue: #110f33;
 $dark-grey: #2e2e30;
 $light-grey: #47474a;
-//$light-grey: #69696e;
 $watermelon: #e00288;
 $bootstrap-blue: #007bff;
 
@@ -137,6 +136,21 @@ p, table {
 
 ul, li {
   font-weight: 200;
+}
+
+#mobileNav {
+  background-color: #ffffff;
+  transition: background-color 0.2s ease;
+
+  .navbar-nav {
+    .nav-item.active {
+      .nav-link {
+        color: $bootstrap-blue !important;
+        font-weight: bold;
+      }
+    }
+  }
+
 }
 
 /* ------------------------------------------------------------------------- */
@@ -344,6 +358,8 @@ a.work-with-me:hover {
   }
 
   .banner {
+    margin-top: 25%;
+
     #intro-text,
     #type-text,
     #name-text {
