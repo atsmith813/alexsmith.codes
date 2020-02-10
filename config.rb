@@ -7,6 +7,10 @@ end
 
 activate :directory_indexes
 
+activate :google_analytics do |ga|
+  ga.tracking_id = 'UA-115884969-2'
+end
+
 activate :deploy do |deploy|
   deploy.deploy_method = :git
   deploy.build_before = true
