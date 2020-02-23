@@ -8,7 +8,13 @@
     .row
       .col-12.col-md-6.offset-md-3
         .text-center
-          = image_tag 'alex_smith_pixelized.png', id: 'headshot', class: 'circle-image', onmouseover: "this.src='/images/alex_smith_wink_pixelized.png'", onmouseout: "this.src='/images/alex_smith_pixelized.png'"
+          = image_tag 'alex_smith_pixelized.png',
+            id: 'headshot',
+            class: 'circle-image',
+            alt: 'Headshot of Alex Smith',
+            title: "Click to see the real me! \n\nIf you'd like a pixelated version of yourself, check out @awacatoo on Instagram.",
+            onmouseover: "this.src='/images/alex_smith_wink_pixelized.png'",
+            onmouseout: "this.src='/images/alex_smith_pixelized.png'"
     .row.mb-5
       .col-12.col-md-6.offset-md-3.text-center
         %h2#intro-text

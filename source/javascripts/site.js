@@ -70,9 +70,11 @@ $(document).ready(function() {
     var currentPath = $('#headshot').attr('src');
 
     if (currentPath.includes('pixelized')) {
-      $('#headshot').attr('src', '/images/headshot.jpeg')
+      $('#headshot').attr('src', '/images/headshot.jpeg');
+      $('#headshot').attr('title', "Click to see me pixelated! \n\nIf you'd like a pixelated version of yourself, check out @awacatoo on Instagram.");
     } else {
-      $('#headshot').attr('src', '/images/alex_smith_pixelized.png')
+      $('#headshot').attr('src', '/images/alex_smith_pixelized.png');
+      $('#headshot').attr('title', "Click to see the real me! \n\nIf you'd like a pixelated version of yourself, check out @awacatoo on Instagram.");
     }
   });
 
@@ -85,7 +87,7 @@ $(document).ready(function() {
     var currentPath = $('#headshot').attr('src');
 
     if(currentPath == '/images/alex_smith_pixelized.png') {
-      $('#headshot').attr('src', '/images/alex_smith_wink_pixelized.png')
+      $('#headshot').attr('src', '/images/alex_smith_wink_pixelized.png');
       setTimeout(unwinkHeadshot, 700);
     }
   }
@@ -94,7 +96,7 @@ $(document).ready(function() {
     var currentPath = $('#headshot').attr('src');
 
     if(currentPath == '/images/alex_smith_wink_pixelized.png') {
-      $('#headshot').attr('src', '/images/alex_smith_pixelized.png')
+      $('#headshot').attr('src', '/images/alex_smith_pixelized.png');
     }
   }
 });
