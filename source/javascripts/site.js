@@ -74,5 +74,27 @@ $(document).ready(function() {
     } else {
       $('#headshot').attr('src', '/images/alex_smith_pixelized.png')
     }
-  })
+  });
+
+  // Wink headshot every 5 seconds on mobile
+  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+    setInterval(winkHeadshot, 6000);
+  }
+
+  function winkHeadshot() {
+    var currentPath = $('#headshot').attr('src');
+
+    if(currentPath == '/images/alex_smith_pixelized.png') {
+      $('#headshot').attr('src', '/images/alex_smith_wink_pixelized.png')
+      setTimeout(unwinkHeadshot, 700);
+    }
+  }
+
+  function unwinkHeadshot() {
+    var currentPath = $('#headshot').attr('src');
+
+    if(currentPath == '/images/alex_smith_wink_pixelized.png') {
+      $('#headshot').attr('src', '/images/alex_smith_pixelized.png')
+    }
+  }
 });
