@@ -64,4 +64,15 @@ $(document).ready(function() {
     $('.navbar-collapse').collapse('hide');
   });
 
+
+  // Switch headshots on click
+  $('#headshot').click(function() {
+    var currentPath = $('#headshot').attr('src');
+
+    if (currentPath.includes('pixelized')) {
+      $('#headshot').attr('src', '/images/headshot.jpeg')
+    } else {
+      $('#headshot').attr('src', '/images/alex_smith_pixelized.png')
+    }
+  })
 });
