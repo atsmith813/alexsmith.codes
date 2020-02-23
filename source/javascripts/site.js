@@ -67,15 +67,20 @@ $(document).ready(function() {
 
   // Switch headshots on click
   $('#headshot').click(function() {
-    var currentPath = $('#headshot').attr('src');
+    var currentSrc = $('#headshot').attr('src');
+    var newSrc = "";
+    var tippyContent = "";
 
-    if (currentPath.includes('pixelized')) {
-      $('#headshot').attr('src', '/images/headshot.jpeg');
-      $('#headshot').attr('title', "Click to see me pixelated! \n\nIf you'd like a pixelated version of yourself, check out @awacatoo on Instagram.");
+    if (currentSrc.includes('pixelized')) {
+      newSrc = "/images/headshot.jpeg";
+      tippyContent = "<p><b>Click to see me pixelated!</b></p><p><em>If you'd like a pixelated image of yourself, check out <a href='https://instagram.com/awacatoo'>@awacatoo</a> on Instagram</em></p>";
     } else {
-      $('#headshot').attr('src', '/images/alex_smith_pixelized.png');
-      $('#headshot').attr('title', "Click to see the real me! \n\nIf you'd like a pixelated version of yourself, check out @awacatoo on Instagram.");
+      newSrc = "/images/alex_smith_pixelized.png";
+      tippyContent = "<p><b>Click to see the real me!</b></p><p><em>If you'd like a pixelated image of yourself, check out <a href='https://instagram.com/awacatoo'>@awacatoo</a> on Instagram</em></p>";
     }
+
+    $('#headshot').attr('src', newSrc);
+    tippyHeadShot.setContent(tippyContent);
   });
 
   // Wink headshot every 5 seconds on mobile
@@ -99,4 +104,21 @@ $(document).ready(function() {
       $('#headshot').attr('src', '/images/alex_smith_pixelized.png');
     }
   }
+
+  // Wink on hover
+  $('#headshot').hover(function() {
+    if ($(this).attr('src').includes('pixelized')){
+      $(this).attr('src', '/images/alex_smith_wink_pixelized.png');
+    }
+  }, function () {
+    if ($(this).attr('src').includes('wink')){
+      $(this).attr('src', '/images/alex_smith_pixelized.png');
+    }
+  });
+
+  // Tooltip headshot
+  const tippyHeadShot = tippy(document.querySelector('#headshot'), {
+    interactive: true,
+    theme: 'light'
+  });
 });

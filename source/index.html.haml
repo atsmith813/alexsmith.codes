@@ -8,13 +8,12 @@
     .row
       .col-12.col-md-6.offset-md-3
         .text-center
+          - tippy_content = "<p><b>Click to see the real me!</b></p><p><em>If you'd like a pixelated image of yourself, check out <a href='https://instagram.com/awacatoo'>@awacatoo</a> on Instagram</em></p>"
           = image_tag 'alex_smith_pixelized.png',
             id: 'headshot',
             class: 'circle-image',
             alt: 'Headshot of Alex Smith',
-            title: "Click to see the real me! \n\nIf you'd like a pixelated version of yourself, check out @awacatoo on Instagram.",
-            onmouseover: "this.src='/images/alex_smith_wink_pixelized.png'",
-            onmouseout: "this.src='/images/alex_smith_pixelized.png'"
+            data: { "tippy-content" => tippy_content }
     .row.mb-5
       .col-12.col-md-6.offset-md-3.text-center
         %h2#intro-text
