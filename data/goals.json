@@ -1,0 +1,122 @@
+[
+  {
+    "year": "2020",
+    "text": "Get a tattoo",
+    "progress": "75",
+    "est_completion": "Q1"
+  },
+  {
+    "year": "2020",
+    "text": "Start taking drum lessons",
+    "progress": "100",
+    "est_completion": "Q2"
+  },
+  {
+    "year": "2020",
+    "text": "Rescue a dog",
+    "progress": "10",
+    "est_completion": "Q3"
+  },
+  {
+    "year": "2020",
+    "text": "Start the skydiving license journey",
+    "progress": "20",
+    "est_completion": "Q4"
+  },
+  {
+    "year": "2019",
+    "text": "Travel to a new foreign country",
+    "progress": "100",
+    "est_completion": "Spring 2019"
+  },
+  {
+    "year": "2019",
+    "text": "Join a rec sports team",
+    "progress": "0",
+    "est_completion": "Summer 2019"
+  },
+  {
+    "year": "2019",
+    "text": "Start the skydiving license journey",
+    "progress": "0",
+    "est_completion": "Summer 2019"
+  },
+  {
+    "year": "2019",
+    "text": "Experiment with Electron",
+    "progress": "15",
+    "est_completion": "Summer 2019"
+  },
+  {
+    "year": "2019",
+    "text": "Play 8 new board games",
+    "progress": "50",
+    "est_completion": "Fall 2019"
+  },
+  {
+    "year": "2019",
+    "text": "Buy a project car",
+    "progress": "10",
+    "est_completion": "Year end"
+  },
+  {
+    "year": "2019",
+    "text": "Read 12 books",
+    "progress": "80",
+    "est_completion": "Year end"
+  },
+  {
+    "year": "2018",
+    "text": "Assemble Porsche 911 GT3 RS model",
+    "progress": "100",
+    "est_completion": "March 2018"
+  },
+  {
+    "year": "2018",
+    "text": "Re-balance stock portfolio",
+    "progress": "100",
+    "est_completion": "March 2018"
+  },
+  {
+    "year": "2018",
+    "text": "Re-build/upgrade my desktop PC",
+    "progress": "100",
+    "est_completion": "April 2018"
+  },
+  {
+    "year": "2018",
+    "text": "Build something using Raspberry Pi",
+    "progress": "40",
+    "est_completion": "June 2018"
+  },
+  {
+    "year": "2018",
+    "text": "Write blog post series",
+    "progress": "10",
+    "est_completion": "July 2018"
+  },
+  {
+    "year": "2018",
+    "text": "Get a foundation for Elixir and Phoenix",
+    "progress": "100",
+    "est_completion": "December 2018"
+  },
+  {
+    "year": "2018",
+    "text": "Get my skydiving license",
+    "progress": "0",
+    "est_completion": "Summer 2018"
+  },
+  {
+    "year": "2018",
+    "text": "Go golfing 20 times",
+    "progress": "90",
+    "est_completion": "Winter 2018"
+  },
+  {
+    "year": "2018",
+    "text": "Read 12 books",
+    "progress": "80",
+    "est_completion": "Year end"
+  }
+]

@@ -10,78 +10,8 @@
     %p
       %h5.text-center 2018
       %br
-      %table.table
-        %thead
-          %tr
-            %th Goal
-            %th Progress
-            %th Est. completion
-        %tbody
-          %tr
-            %td Assemble Porsche 911 GT3 RS model
-            %td
-              .progress
-                .progress-bar{ 'aria-valuemax' => '100', 'aria-valuemin' => '0', 'aria-valuenow' => '100', role: 'progressbar', style: 'width: 100%' }
-            %td March 2018
-          %tr
-            %td Re-balance stock portfolio
-            %td
-              .progress
-                .progress-bar{ 'aria-valuemax' => '100', 'aria-valuemin' => '0', 'aria-valuenow' => '100', role: 'progressbar', style: 'width: 100%' }
-            %td March 2018
-          %tr
-            %td Re-build/upgrade my desktop PC
-            %td
-              .progress
-                .progress-bar{ 'aria-valuemax' => '100', 'aria-valuemin' => '0', 'aria-valuenow' => '100', role: 'progressbar', style: 'width: 100%' }
-            %td April 2018
-          %tr
-            %td Build something using Raspberry Pi
-            %td
-              .progress
-                .progress-bar{ 'aria-valuemax' => '100', 'aria-valuemin' => '0', 'aria-valuenow' => '40', role: 'progressbar', style: 'width: 40%' }
-            %td June 2018
-          %tr
-            %td Write blog post series
-            %td
-              .progress
-                .progress-bar{ 'aria-valuemax' => '100', 'aria-valuemin' => '0', 'aria-valuenow' => '10', role: 'progressbar', style: 'width: 10%' }
-            %td July 2018
-          %tr
-            %td Get a foundation for Elixir and Phoenix
-            %td
-              .progress
-                .progress-bar{ 'aria-valuemax' => '100', 'aria-valuemin' => '0', 'aria-valuenow' => '100', role: 'progressbar', style: 'width: 100%' }
-            %td December 2018
-          %tr
-            %td Get my skydiving license
-            %td
-              .progress
-                .progress-bar{ 'aria-valuemax' => '100', 'aria-valuemin' => '0', 'aria-valuenow' => '0', role: 'progressbar', style: 'width: 0%' }
-            %td Summer 2018
-          %tr
-            %td Go golfing 20 times
-            %td
-              .progress
-                .progress-bar{ 'aria-valuemax' => '100', 'aria-valuemin' => '0', 'aria-valuenow' => '90', role: 'progressbar', style: 'width: 90%' }
-            %td Winter 2018
-          %tr
-            %td Visit all my good friends from middle and high school
-            %td
-              .progress
-                .progress-bar{ 'aria-valuemax' => '100', 'aria-valuemin' => '0', 'aria-valuenow' => '90', role: 'progressbar', style: 'width: 90%' }
-            %td Year end
-          %tr
-            %td Read 12 books
-            %td
-              .progress
-                .progress-bar{ 'aria-valuemax' => '100', 'aria-valuemin' => '0', 'aria-valuenow' => '80', role: 'progressbar', style: 'width: 80%' }
-            %td Year end
-          %tr
-            %td No regrets: leave a positive impact on others
-            %td Always in progress
-            %td Life
-
+      - goals2018 = data.goals.select { |goal| goal.year == "2018" }
+      = partial('partials/goals_table', locals: { goals: goals2018 })
       %br
       %br
       %h5.text-center 2019
@@ -93,66 +23,8 @@
         I snapped my collar bone and had to have surgery to put a 5-inch titanium
         plate and 8 screws into my shoulder. This threw quite the wrench in my plans.
       %br
-      %table.table
-        %thead
-          %tr
-            %th Goal
-            %th Progress
-            %th Est. completion
-        %tbody
-          %tr
-            %td Travel to a new foreign country
-            %td
-              .progress
-                .progress-bar{ 'aria-valuemax' => '100', 'aria-valuemin' => '0', 'aria-valuenow' => '100', role: 'progressbar', style: 'width: 100%' }
-            %td Spring 2019
-          %tr
-            %td Join a rec sports team
-            %td
-              .progress
-                .progress-bar{ 'aria-valuemax' => '100', 'aria-valuemin' => '0', 'aria-valuenow' => '0', role: 'progressbar', style: 'width: 0%' }
-            %td Summer 2019
-          %tr
-            %td Start the skydiving license journey
-            %td
-              .progress
-                .progress-bar{ 'aria-valuemax' => '100', 'aria-valuemin' => '0', 'aria-valuenow' => '0', role: 'progressbar', style: 'width: 0%' }
-            %td Summer 2019
-          %tr
-            %td Experiment with Electron
-            %td
-              .progress
-                .progress-bar{ 'aria-valuemax' => '100', 'aria-valuemin' => '0', 'aria-valuenow' => '12.5', role: 'progressbar', style: 'width: 12.5%' }
-            %td Summer 2019
-          %tr
-            %td Play 8 new board games
-            %td
-              .progress
-                .progress-bar{ 'aria-valuemax' => '100', 'aria-valuemin' => '0', 'aria-valuenow' => '50', role: 'progressbar', style: 'width: 50%' }
-            %td Fall 2019
-          %tr
-            %td Visit all my good friends from middle and high school
-            %td
-              .progress
-                .progress-bar{ 'aria-valuemax' => '100', 'aria-valuemin' => '0', 'aria-valuenow' => '90', role: 'progressbar', style: 'width: 90%' }
-            %td Year end
-          %tr
-            %td Buy a project car
-            %td
-              .progress
-                .progress-bar{ 'aria-valuemax' => '100', 'aria-valuemin' => '0', 'aria-valuenow' => '10', role: 'progressbar', style: 'width: 10%' }
-            %td Year end
-          %tr
-            %td Read 12 books
-            %td
-              .progress
-                .progress-bar{ 'aria-valuemax' => '100', 'aria-valuemin' => '0', 'aria-valuenow' => '80', role: 'progressbar', style: 'width: 80%' }
-            %td Year end
-          %tr
-            %td Open doors for others that were closed for me
-            %td Always in progress
-            %td Life
-
+      - goals2019 = data.goals.select { |goal| goal.year == "2019" }
+      = partial('partials/goals_table', locals: { goals: goals2019 })
       %br
       %br
       = partial 'partials/future'
