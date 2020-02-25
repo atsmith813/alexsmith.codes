@@ -1,0 +1,16 @@
+#books
+  %h3 Books
+  %p
+    Here are some of my favorite books that I've read (in no particular order).
+  .card-columns
+    - data.books.each do |book|
+      .card.vw-50.vh-50
+        %img.card-img-top.book-img{ alt: "#{book.title} book cover", src: "/images/books/#{book.image_name}" }
+        .card-body
+          %p.card-title.font-weight-bold
+            = book.title
+          %p.card-text.font-italic
+            = "by #{book.author}"
+          %p.card-text
+            %small.text-muted
+              = link_to 'View on Amazon', book.amazon_url, target: '_blank'

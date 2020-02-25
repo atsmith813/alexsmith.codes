@@ -1,0 +1,74 @@
+[
+  {
+    "title": "Atlas Shrugged",
+    "author": "Ayn Rand",
+    "amazon_url": "https://www.amazon.com/Atlas-Shrugged-Ayn-Rand/dp/0451191145/",
+    "image_name": "atlas_shrugged.jpg"
+  },
+  {
+    "title": "American Radical",
+    "author": "Tamer Elnoury, Kevin Maurer",
+    "amazon_url": "https://www.amazon.com/gp/product/1101986174",
+    "image_name": "american_radical.jpg"
+  },
+  {
+    "title": "Bad Blood",
+    "author": "John Carreyrou",
+    "amazon_url": "https://www.amazon.com/Bad-Blood-Secrets-Silicon-Startup/dp/0525431993/",
+    "image_name": "bad_blood.jpg"
+  },
+  {
+    "title": "Chaos Monkeys: Obscene Fortune and Random Failure in Silicon Valley",
+    "author": "Antonio Garcia Martinez",
+    "amazon_url": "https://www.amazon.com/gp/product/B019MMUAAQ/",
+    "image_name": "chaos_monkeys.jpg"
+  },
+  {
+    "title": "Originals: How Non-Conformists Move the World",
+    "author": "Adam Grant",
+    "amazon_url": "https://www.amazon.com/gp/product/B00XIYGCDO/",
+    "image_name": "originals.jpg"
+  },
+  {
+    "title": "How Music Got Free: A Story of Obsession and Invention",
+    "author": "Stephen Richard Witt",
+    "amazon_url": "https://www.amazon.com/gp/product/B00OZ0TKL6",
+    "image_name": "how_music_got_free.jpg"
+  },
+  {
+    "title": "Young Money: Inside the Hidden World of Wall Street's Post-Crash Recruits",
+    "author": "Kevin Roose",
+    "amazon_url": "https://www.amazon.com/gp/product/B00CO7GH54/",
+    "image_name": "young_money.jpg"
+  },
+  {
+    "title": "The Driver: My Dangerous Pursuit of Speed and Truth in the Outlaw Racing World",
+    "author": "Alexander Roy",
+    "amazon_url": "https://www.amazon.com/gp/product/B000W94FX2/",
+    "image_name": "the_driver.jpg"
+  },
+  {
+    "title": "The Autobiography of Gucci Mane",
+    "author": "Gucci Mane, Neil Martinez-Belkin",
+    "amazon_url": "https://www.amazon.com/Autobiography-Gucci-Mane/dp/1501165348/",
+    "image_name": "gucci_mane.jpg"
+  },
+  {
+    "title": "I'll Be There for You: The One about Friends",
+    "author": "Kelsey Miller",
+    "amazon_url": "https://www.amazon.com/Ill-Be-There-You-Friends/dp/1335005528/",
+    "image_name": "ill_be_there_for_you.jpg"
+  },
+  {
+    "title": "Billion Dollar Whale: The Man Who Fooled Wall Street, Hollywood, and the World",
+    "author": "Bradley Hope, Tom Wright",
+    "amazon_url": "https://www.amazon.com/Billion-Dollar-Whale-Fooled-Hollywood/dp/031643647X/",
+    "image_name": "billion_dollar_whale.jpg"
+  },
+  {
+    "title": "Black Edge: Inside Information, Dirty Money, and the Quest to Bring Down the Most Wanted Man on Wall Street",
+    "author": "Sheelah Kolhatkar",
+    "amazon_url": "https://www.amazon.com/Black-Edge-Inside-Information-Wanted/dp/0812985796/",
+    "image_name": "black_edge.jpg"
+  }
+]

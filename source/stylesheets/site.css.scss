@@ -23,6 +23,12 @@ h1, h2, h3, h4, h5, h6 {
   margin: 3em 0em;
 }
 
+#books {
+  .card-columns {
+    column-count: 4;
+  }
+}
+
 #headshot {
   cursor: pointer;
 }
@@ -336,6 +342,12 @@ a.work-with-me:hover {
 
 /* MEDIAQUERIES */
 @media (max-width: 768px) {
+  #books {
+    .card-columns {
+      column-count: 1;
+    }
+  }
+
   #sidebar.active {
     margin-left: -250px;
   }
