@@ -31,3 +31,12 @@ configure :build do
   activate :minify_css
   activate :minify_javascript
 end
+
+helpers do
+  def date_parsed_goals
+    data.goals.map do |goal|
+      goal.completion_date = Date.strptime(goal.completion_date, '%m/%d/%Y')
+      goal
+    end
+  end
+end
