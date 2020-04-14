@@ -28,6 +28,13 @@
     "est_completion": "Q4"
   },
   {
+    "year": "2020",
+    "text": "Buy a house",
+    "progress": "10",
+    "completion_date": "12/31/2020",
+    "est_completion": "Year end"
+  },
+  {
     "year": "2019",
     "text": "Travel to a new foreign country",
     "progress": "100",
