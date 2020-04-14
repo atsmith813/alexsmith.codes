@@ -1,5 +1,11 @@
 [
   {
+    "title": "The Daily Stoic",
+    "author": "Ryan Holiday",
+    "amazon_url": "https://www.amazon.com/Daily-Stoic-Meditations-Wisdom-Perseverance/dp/0735211736",
+    "image_name": "the_daily_stoic.jpg"
+  },
+  {
     "title": "Atlas Shrugged",
     "author": "Ayn Rand",
     "amazon_url": "https://www.amazon.com/Atlas-Shrugged-Ayn-Rand/dp/0451191145/",
