@@ -28,34 +28,6 @@ $(document).ready(function() {
     loop: true
   });
 
-  // Scrollbar for side nav
-  $('#sidebar').mCustomScrollbar({
-    theme: 'minimal'
-  });
-
-  // Menu button
-  $('#sidebarCollapse').on('click', function () {
-    $('#sidebar, #content').toggleClass('active');
-    $('.collapse.in').toggleClass('in');
-    $('a[aria-expanded=true]').attr('aria-expanded', 'false');
-    $(this).toggleClass('active');
-  });
-
-  // Hide menu button until page is scrolled
-  var navbarCollapse = function() {
-    if ($(window).scrollTop() > 150) {
-      $('#sidebarCollapse').show();
-    } else {
-      $('#sidebarCollapse').hide();
-    }
-  };
-
-  // Hide menu button now if page is at the top
-  navbarCollapse();
-
-  // Hide menu button when page is scrolled
-  $(window).scroll(navbarCollapse);
-
   // Closes responsive menu when an item is clicked
   // Adds active class to selected menu item
   $('.nav-item').click(function() {
@@ -64,6 +36,10 @@ $(document).ready(function() {
     $('.navbar-collapse').collapse('hide');
   });
 
+  const tippyContent = "<b>Click to see me pixelated!</b>";
+  const headshot = "/images/headshot_teal_bg.jpg";
+  const pixelizedHeadshot = "/images/alex_smith_pixelized.png";
+  const winkingPixelizedHeadshot = "/images/alex_smith_wink_pixelized.png";
 
   // Switch headshots on click
   $('#headshot').click(function() {
@@ -72,11 +48,9 @@ $(document).ready(function() {
     var tippyContent = "";
 
     if (currentSrc.includes('pixelized')) {
-      newSrc = "/images/headshot.jpeg";
-      tippyContent = "<p><b>Click to see me pixelated!</b></p><p><em>If you'd like a pixelated image of yourself, check out <a href='https://instagram.com/awacatoo'>@awacatoo</a> on Instagram</em></p>";
+      newSrc = headshot;
     } else {
-      newSrc = "/images/alex_smith_pixelized.png";
-      tippyContent = "<p><b>Click to see the real me!</b></p><p><em>If you'd like a pixelated image of yourself, check out <a href='https://instagram.com/awacatoo'>@awacatoo</a> on Instagram</em></p>";
+      newSrc = pixelizedHeadshot;
     }
 
     $('#headshot').attr('src', newSrc);
@@ -91,8 +65,8 @@ $(document).ready(function() {
   function winkHeadshot() {
     var currentPath = $('#headshot').attr('src');
 
-    if(currentPath == '/images/alex_smith_pixelized.png') {
-      $('#headshot').attr('src', '/images/alex_smith_wink_pixelized.png');
+    if(currentPath == pixelizedHeadshot) {
+      $('#headshot').attr('src', winkingPixelizedHeadshot);
       setTimeout(unwinkHeadshot, 700);
     }
   }
@@ -100,19 +74,19 @@ $(document).ready(function() {
   function unwinkHeadshot() {
     var currentPath = $('#headshot').attr('src');
 
-    if(currentPath == '/images/alex_smith_wink_pixelized.png') {
-      $('#headshot').attr('src', '/images/alex_smith_pixelized.png');
+    if(currentPath == headshot) {
+      $('#headshot').attr('src', pixelizedHeadshot);
     }
   }
 
   // Wink on hover
   $('#headshot').hover(function() {
     if ($(this).attr('src').includes('pixelized')){
-      $(this).attr('src', '/images/alex_smith_wink_pixelized.png');
+      $(this).attr('src', winkingPixelizedHeadshot);
     }
   }, function () {
     if ($(this).attr('src').includes('wink')){
-      $(this).attr('src', '/images/alex_smith_pixelized.png');
+      $(this).attr('src', pixelizedHeadshot);
     }
   });
 
