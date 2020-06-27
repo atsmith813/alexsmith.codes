@@ -30,13 +30,11 @@ $(document).ready(function() {
 
   // Closes responsive menu when an item is clicked
   // Adds active class to selected menu item
-  $('.nav-item').click(function() {
-    $('.nav-item').removeClass('active');
-    $(this).addClass('active');
-    $('.navbar-collapse').collapse('hide');
-  });
+  //$('.nav-item').click(function() {
+    //$('.nav-item').removeClass('active');
+    //$(this).addClass('active');
+  //});
 
-  const tippyContent = "<b>Click to see me pixelated!</b>";
   const headshot = "/images/headshot_teal_bg.jpg";
   const pixelizedHeadshot = "/images/alex_smith_pixelized.png";
   const winkingPixelizedHeadshot = "/images/alex_smith_wink_pixelized.png";
@@ -45,11 +43,14 @@ $(document).ready(function() {
   $('#headshot').click(function() {
     var currentSrc = $('#headshot').attr('src');
     var newSrc = "";
+    var tippyContent = "";
 
     if (currentSrc.includes('pixelized')) {
       newSrc = headshot;
+      tippyContent = "<b>Click to see me pixelized!</b>";
     } else {
       newSrc = pixelizedHeadshot;
+      tippyContent = "<b>Click to see the real me!</b>";
     }
 
     $('#headshot').attr('src', newSrc);

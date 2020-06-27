@@ -1,152 +1,49 @@
 #content.active
   .section.banner
     .row
-      .col-12.col-md-6.offset-md-3
-        .text-center
-          - tippy_content = "<b>Click to see the real me!</b>"
+      .col-6
+        .col-10
           = image_tag 'alex_smith_pixelized.png',
             id: 'headshot',
             class: 'circle-image',
             alt: 'Headshot of Alex Smith',
-            data: { "tippy-content" => tippy_content }
-    .row.mb-5
-      .col-12.col-md-6.offset-md-3.text-center
-        %h2#intro-text
-          I've been called many things...
-        %h1#type-text
-        %h2#name-text
-          But you can call me
-        #name.hvr-float-shadow
-          Alex
-  #about.section.about-me-summary
-    .row.mb-5
-      .col-12.col-md-8.offset-md-2
-        %h3
-          TLDR
-        %p
-          A borderline cold brew coffee addict and a Florida native currently
-          residing in Tampa, Florida, my name is Alexander Smith (Alex). If I
-          had to describe a
-          %em "personal mission statement"
-          , I'd say that mine is to provide others with opportunities -
-          especially if it helps them move up the so-called socio-economic
-          ladder.
-        %p
-          While I call Tampa home, I was born in Baltimore, MD and I've been to
-          Germany more times than my fingers permit me to count. I have a black
-          belt in Taekwondo (it's been awhile though). I originally planned to
-          join the military and was in ROTC in High School. My friends call me
-          an adrenaline junkie because I love anything with an engine. I've had
-          experience with 4-wheelers, go-karts, boats, jet skis, motorcycles,
-          sports cars, and more. If it goes fast, I'm interested. Speaking of
-          interested, want to learn more?  You can read more about...
-        %p
-          %a{ href: '#past' } How I went from flipping burgers at the
-          neighborhood DQ to Wall Street.
-        %p
-          %a{ href: '#present' } How I retired from being a corporate mercenary
-          and became a Full-Stack Developer at a startup.
-        %p
-          %a{ href: '#future' } What I'm working towards next.
-        %p
-          And while we're still talking about me, you can
-          %a{ href: 'https://hirealexsmith.com' } hire me
-          to help
-          = succeed '!' do
-            %span{ style: 'font-style: italic;' } you
-
-    .row
-      .col-12.col-md-8.offset-md-2
-        %h3
-          Quick timeline of professional experience
-        %p
-          Clicking on the company titles will take you to the section of my
-          story describing the position. You can also check out my resume
-          = succeed "." do
-            %a{ href: '/alex_smith_resume.pdf', target: '_blank' } here
-          = partial 'partials/experience_links'
-
-  #past.row
-    .col
-      %hr
-  .section
-    .row
-      .col-12.col-md-8.offset-md-2
-        %h3
-          Where I've been
-        %p.about-me-quote
-          %i.fa.fa-quote-left.fa-3x.fa-pull-left
-          You don't know where you're going until you know where you've been.
-        %br
-        %p.about-me-text
-          = partial 'partials/past'
-  #present.row
-    .col
-      %hr
-  .section
-    .row
-      .col-12.col-md-8.offset-md-2
-        %h3
-          Where I am
-        %p.about-me-quote
-          %i.fa.fa-quote-left.fa-3x.fa-pull-left
-          Our DNA is 96% chimpanzee. Is that even worth arguing?! If I gave
-          you a sandwich that was filled with 96% sh*t and 4% ham, would you
-          be willing to consider that a ham sandwich? So If you ever start
-          taking things too seriously, just remember that we are talking monkeys
-          on an organic spaceship flying through the universe. - Joe Rogan
-        %br
-        %p.about-me-text
-          = partial 'partials/present'
-  #future.row
-    .col
-      %hr
-  .section
-    .row
-      .col-12.col-md-8.offset-md-2
-        %h3
-          Where I'm going
-        %p.about-me-quote
-          %i.fa.fa-quote-left.fa-3x.fa-pull-left
-          I don't regret the things I've done, only the things I've never tried.
-        %br
-        %p
-          = partial 'partials/future'
-        %br
-        %p.font-italic
-          %a{ href: '/goals', target: '_blank' } Here
-          you can see past goals and progress.
-  #interests.row
-    .col
-      %hr
-  .section
-    .row.mb-5
-      .col-12.col-md-8.offset-md-2
-        %h3
-          Hobbies and interests
-        %p
-          Hobbies and interests can be so vague...I like to think of this
-          section as answers to the question of, "what are some things that you
-          would go out of your way to do in your free time?". But that's not a
-          cool title so I still call these hobbies and interests.
-        %p
-          .row
-            .col.col-md-6.col-xs-6
-              %p Skydiving
-              %p Cars
-              %p Computers
-              %p Volleyball
-              %p Playing the drums
-            .col.col-md-6.col-xs-6
-              %p Music / speakers
-              %p Golf
-              %p Board games
-              %p Social justice
-              %p Hiking
-    .row.mb-5
-      .col-12.col-md-8.offset-md-2
-        = partial 'partials/books'
-    .row.mb-5
-      .col-12.col-md-8.offset-md-2
-        = partial 'partials/music'
+            data: { "tippy-content" => "<b>Click to see the real me!</b>" }
+      .col-6
+        .col-10
+          .font-weight-bold.theme-teal-text.display-3.block
+            Alex Smith
+          .h4.text-muted
+            Software Engineer
+          .my-5
+            %p.h2
+              I've been called many things...
+            %p.h2.font-weight-bold.font-italic.theme-teal-text#type-text
+          .my-5
+            %h3.mt-10.font-weight-bold.theme-teal-text
+              TLDR
+            %p
+              A borderline cold brew coffee addict and a Florida native
+              currently residing in Tampa, Florida, my name is Alexander Smith
+              (Alex). If I had to describe a
+              %em "personal mission statement"
+              , I'd say that mine is to provide others with opportunities -
+              especially if it helps them move up the so-called socio-economic
+              ladder.
+            %p
+              While I call Tampa home, I was born in Baltimore, MD and I've
+              been to Germany more times than my fingers permit me to count
+              (I'm Black and German). Want to learn more? You can read more
+              about...
+            %p
+              %a{ href: '#past' } How I went from flipping burgers at the neighborhood DQ to Wall Street.
+            %p
+              %a{ href: '#present' } How I retired from being a corporate mercenary and became a Full-Stack Developer at a startup.
+            %p
+              %a{ href: '#future' } What I'm working towards next.
+            %p
+              And while we're still talking about me, you can
+              %a{ href: 'https://hirealexsmith.com' } hire me
+              to help
+              = succeed '!' do
+                %span.font-italic you
   = partial 'partials/footer'

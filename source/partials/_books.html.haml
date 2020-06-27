@@ -1,18 +1,24 @@
-#books
-  %h3 Books
-  %p
-    Here are some of my favorite books that I've read (in no particular order).
-  .card-columns
-    - data.books.each do |book|
-      .card.vw-50.vh-50
-        - book_cover_image = image_tag("/images/books/#{book.image_name}",
-          class: 'card-img-top book-img',
-          alt: "#{book.title} book cover")
+.section
+  #books.row
+    .col-10.offset-1
+      %hr
+    .row.mb-5
+      .col-8.offset-2
+        %h3 Books
+        %p
+          Here are some of my favorite books that I've read (in no particular order).
+        .card-columns
+          - data.books.each do |book|
+            .card.vw-50.vh-50
+              - book_cover_image = image_tag("/images/books/#{book.image_name}",
+                class: 'card-img-top book-img',
+                alt: "#{book.title} book cover")
 
-        = link_to(book_cover_image, book.amazon_url, target: '_blank')
+              = link_to(book_cover_image, book.amazon_url, target: '_blank')
 
-        .card-body
-          %p.card-title.font-weight-bold
-            = book.title
-          %p.card-text.font-italic
-            = "by #{book.author}"
+              .card-body
+                %p.card-title.font-weight-bold
+                  = book.title
+                %p.card-text.font-italic
+                  = "by #{book.author}"
+    .row.mb-5
