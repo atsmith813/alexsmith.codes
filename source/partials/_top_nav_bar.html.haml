@@ -1,0 +1,16 @@
+%nav.navbar.navbar-expand-lg.fixed-top.justify-content-center.py-3.bg-white.d-none.d-lg-flex
+  .navbar-nav
+    %a.nav-item.nav-link.rounded{ href: '/' } Home
+    .nav-item.dropdown
+      %a#aboutDropdownMenuLink.nav-link.dropdown-toggle.rounded{ 'aria-expanded' => 'false', 'aria-haspopup' => 'true', 'data-toggle' => 'dropdown', href: '/about' } About
+      .dropdown-menu{ 'aria-labelledby' => 'aboutDropdownMenuLink' }
+        %a.dropdown-item{ href: '/about#past'} Past
+        %a.dropdown-item{ href: '/about#present'} Present
+        %a.dropdown-item{ href: '/about#future'} Goals
+    %a.nav-item.nav-link.rounded{ href: '/experience' } Experience
+    .nav-item.dropdown
+      %a#interestsDropdownMenuLink.nav-link.dropdown-toggle.rounded{ 'aria-expanded' => 'false', 'aria-haspopup' => 'true', 'data-toggle' => 'dropdown', href: '/interests' } Interests
+      .dropdown-menu{ 'aria-labelledby' => 'interestsDropdownMenuLink' }
+        %a.dropdown-item{ href: '/interests#hobbies'} Hobbies
+        %a.dropdown-item{ href: '/interests#books'} Books
+        %a.dropdown-item{ href: '/interests#music'} Music

@@ -1,3 +1,4 @@
+$theme-teal: #46AD9C;
 $dark-blue: #110f33;
 $dark-grey: #2e2e30;
 $light-grey: #47474a;
@@ -9,8 +10,43 @@ body {
   position: relative;
 }
 
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Work Sans', sans-serif;
+}
+
+p, table {
+  font-weight: 200;
+}
+
+ul, li {
+  font-weight: 200;
+}
+
+nav {
+  a {
+    color: $theme-teal;
+  }
+
+  a:hover {
+    background-color: $theme-teal;
+    color: white;
+  }
+
+  .dropdown-menu {
+    a {
+      color: $theme-teal;
+    }
+
+    a:hover {
+      background-color: $theme-teal;
+      color: white;
+    }
+  }
+}
+
+.container {
+  padding-top: 6rem;
 }
 
 .quote,
@@ -140,200 +176,12 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 2em;
 }
 
-p, table {
-  font-weight: 200;
-}
-
-ul, li {
-  font-weight: 200;
-}
-
-#mobileNav {
-  background-color: #ffffff;
-  transition: background-color 0.2s ease;
-
-  .navbar-nav {
-    .nav-item.active {
-      .nav-link {
-        color: $bootstrap-blue !important;
-        font-weight: bold;
-      }
-    }
-  }
-
-}
-
-/* ------------------------------------------------------------------------- */
-/*|                               SIDEBAR                                   |*/
-/* ------------------------------------------------------------------------- */
-.wrapper {
-  display: flex;
-  width: 100%;
-}
-
-#sidebarCollapse {
-  width: 40px;
-  height: 40px;
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 4px;
-  align-items: flex-start;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 20px;
-  z-index: 999;
-}
-
-#sidebarCollapse span {
-  width: 80%;
-  height: 2px;
-  margin: 0 auto;
-  display: block;
-  background: #000000;
-  border-radius: 4px;
-  transition: all 0.8s cubic-bezier(0.810, -0.330, 0.345, 1.375);
-}
-
-#sidebarCollapse span:first-of-type {
-  /* rotate first one */
-  transform: rotate(45deg) translate(2px, 2px);
-}
-
-#sidebarCollapse span:nth-of-type(2) {
-  /* second one is not visible */
-  opacity: 0;
-}
-
-#sidebarCollapse span:last-of-type {
-  /* rotate third one */
-  transform: rotate(-45deg) translate(1px, -1px);
-}
-
-#sidebarCollapse.active span {
-  /* no rotation */
-  transform: none;
-  /* all bars are visible */
-  opacity: 1;
-  margin: 5px auto;
-}
-
-#sidebar {
-  width: 250px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  z-index: 999;
-  background: $dark-grey;
-  color: #ffffff;
-  transition: all 0.3s;
-
-  a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-  }
-
-  .social-media-icons {
-    i {
-      font-size: 2rem;
-    }
-
-    /* Base styles for the tooltip's content area */
-    .tooltip:after,
-    [data-tooltip]:after {
-      background-color: #ffffff;
-      color: $dark-grey;
-    }
-  }
-}
-
-#sidebar.active {
-  margin-left: -250px;
-}
-
-#sidebar .sidebar-header {
-  padding: 20px;
-  background: $dark-grey;
-}
-
-#sidebar ul.components {
-  padding: 20px 0;
-  border-bottom: 1px solid $dark-grey;
-}
-
-#sidebar ul p {
-  color: #ffffff;
-  padding: 10px;
-}
-
-#sidebar ul li a {
-  padding: 10px;
-  font-size: 1.1em;
-  display: block;
-}
-
-#sidebar ul li a:hover {
-  color: #ffffff;
-  background: $watermelon;
-}
-
-#sidebar ul li.active>a,
-a[aria-expanded="true"] {
-  color: #ffffff;
-  background: $bootstrap-blue;
-}
-
-a[data-toggle="collapse"] {
-  position: relative;
-}
-
-.dropdown-toggle::after {
-  display: block;
-  position: absolute;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
-}
-
-ul ul a {
-  font-size: 0.9em !important;
-  padding-left: 30px !important;
-  background: $light-grey;
-}
-
-ul.CTAs {
-  padding: 20px;
-}
-
-ul.CTAs a {
-  text-align: center;
-  font-size: 0.9em !important;
-  display: block;
-  border-radius: 5px;
-  margin-bottom: 5px;
-}
-
-a.contact {
-  background: $bootstrap-blue;
-  color: #ffffff;
-}
-
-a.work-with-me,
-a.work-with-me:hover {
-  background: $bootstrap-blue;
-  color: #ffffff;
-}
-
 /* CONTENT STYLE */
 #content {
   width: calc(100% - 250px);
   padding: 0px 40px 40px 40px;
   min-height: 100vh;
   transition: all 0.3s;
-  position: absolute;
-  top: 0;
-  right: 0;
 }
 
 #content.active {
@@ -342,18 +190,14 @@ a.work-with-me:hover {
 
 /* MEDIAQUERIES */
 @media (max-width: 768px) {
+  .container {
+    padding-top: 0rem;
+  }
+
   #books {
     .card-columns {
       column-count: 1;
     }
-  }
-
-  #sidebar.active {
-    margin-left: -250px;
-  }
-
-  #sidebar {
-    margin-left: 0;
   }
 
   #content.active {
@@ -364,18 +208,7 @@ a.work-with-me:hover {
     width: calc(100% - 250px);
   }
 
-  #sidebarCollapse {
-    display: none;
-  }
-
-  .graph {
-    width: 100%;
-    height: auto;
-  }
-
   .banner {
-    margin-top: 25%;
-
     #intro-text,
     #type-text,
     #name-text {

@@ -51,7 +51,6 @@
     %link{ href: 'https://fonts.googleapis.com/css?family=Work+Sans&display=swap', rel: 'stylesheet' }
     %link{ href: 'https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css', rel: 'stylesheet' }
     %link{ href: 'https://unpkg.com/tippy.js@5/themes/light.css', rel: 'stylesheet' }
-
     = stylesheet_link_tag 'site'
 
     / JS
@@ -63,12 +62,12 @@
     %script{ src: 'https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js' }
     %script{ src: 'https://unpkg.com/popper.js@1' }
     %script{ src: 'https://unpkg.com/tippy.js@5' }
-
     = javascript_include_tag 'site'
 
     %title Alex | Software Engineer
 
   %body
+    = partial 'partials/top_nav_bar'
     .container
       = yield
       = google_analytics_tag
