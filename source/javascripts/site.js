@@ -45,7 +45,6 @@ $(document).ready(function() {
   $('#headshot').click(function() {
     var currentSrc = $('#headshot').attr('src');
     var newSrc = "";
-    var tippyContent = "";
 
     if (currentSrc.includes('pixelized')) {
       newSrc = headshot;
