@@ -22,7 +22,12 @@ ul, li {
 a, a:hover {
   color: $theme-teal;
 }
+
 nav {
+  .active {
+    color: $theme-teal;
+  }
+
   .dropdown:hover .dropdown-menu {
     display: block;
   }
@@ -30,7 +35,7 @@ nav {
   a {
     color: black;
 
-    .active {
+    .nav-link.active {
       color: $theme-teal;
     }
   }
@@ -39,13 +44,15 @@ nav {
     color: $theme-teal;
   }
 
+  .dropdown-item.active,
+  .dropdown-item:active {
+    color: $theme-teal;
+    background-color: white;
+  }
+
   .dropdown-menu {
     a {
       color: black;
-
-      .active {
-        color: $theme-teal;
-      }
     }
 
     a:hover {

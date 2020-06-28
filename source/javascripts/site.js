@@ -1,6 +1,6 @@
 $(document).ready(function() {
   // TypeIt
-  var type_text = [
+  let type_text = [
     'Hard-working',
     'Genuine',
     'Unanticipated',
@@ -28,33 +28,22 @@ $(document).ready(function() {
     loop: true
   });
 
-  // Closes responsive menu when an item is clicked
-  // Adds active class to selected menu item
-  //$('.nav-item').click(function() {
-    //$('.nav-item').removeClass('active');
-    //$(this).addClass('active');
-  //});
-
   const headshot = "/images/headshot_teal_bg.jpg";
   const pixelizedHeadshot = "/images/alex_smith_pixelized.png";
   const winkingPixelizedHeadshot = "/images/alex_smith_wink_pixelized.png";
 
   // Switch headshots on click
   $('#headshot').click(function() {
-    var currentSrc = $('#headshot').attr('src');
-    var newSrc = "";
-    var tippyContent = "";
+    let currentSrc = $('#headshot').attr('src');
+    let newSrc = "";
 
     if (currentSrc.includes('pixelized')) {
       newSrc = headshot;
-      tippyContent = "<b>Click to see me pixelized!</b>";
     } else {
       newSrc = pixelizedHeadshot;
-      tippyContent = "<b>Click to see the real me!</b>";
     }
 
     $('#headshot').attr('src', newSrc);
-    tippyHeadShot.setContent(tippyContent);
   });
 
   // Wink headshot every 5 seconds on mobile
@@ -63,7 +52,7 @@ $(document).ready(function() {
   }
 
   function winkHeadshot() {
-    var currentPath = $('#headshot').attr('src');
+    let currentPath = $('#headshot').attr('src');
 
     if(currentPath == pixelizedHeadshot) {
       $('#headshot').attr('src', winkingPixelizedHeadshot);
@@ -72,7 +61,7 @@ $(document).ready(function() {
   }
 
   function unwinkHeadshot() {
-    var currentPath = $('#headshot').attr('src');
+    let currentPath = $('#headshot').attr('src');
 
     if(currentPath == headshot) {
       $('#headshot').attr('src', pixelizedHeadshot);
@@ -90,9 +79,16 @@ $(document).ready(function() {
     }
   });
 
-  // Tooltip headshot
-  const tippyHeadShot = tippy(document.querySelector('#headshot'), {
-    interactive: true,
-    theme: 'light'
+  // Active menu item highlighting
+  function updateActiveNav(currentLocation) {
+    $('.navbar a.active').removeClass('active');
+    let target = "/".concat(currentLocation.split("/").pop());
+    $(`.navbar a[href="${target}"]`).addClass('active');
+  }
+
+  $('.navbar a').click(function() {
+    updateActiveNav(this.href);
   });
+
+  updateActiveNav(location.href);
 });
