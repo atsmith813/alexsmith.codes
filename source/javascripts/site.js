@@ -80,10 +80,11 @@ $(document).ready(function() {
   });
 
   // Active menu item highlighting
-  function updateActiveNav(currentLocation) {
+  function updateActiveNav(currentHref) {
     $('.navbar a.active').removeClass('active');
-    let target = "/".concat(currentLocation.split("/").pop());
-    $(`.navbar a[href="${target}"]`).addClass('active');
+    let currentLocation = "/".concat(currentHref.split("/").pop());
+    let parentTarget = currentLocation.split("#").shift();
+    $(`.navbar a[href="${parentTarget}"], .navbar a[href="${currentLocation}"]`).addClass('active');
   }
 
   $('.navbar a').click(function() {
