@@ -28,11 +28,11 @@ $(document).ready(function() {
     loop: true
   });
 
+  // Switch headshots on click
   const headshot = "/images/headshot_teal_bg.jpg";
   const pixelizedHeadshot = "/images/alex_smith_pixelized.png";
   const winkingPixelizedHeadshot = "/images/alex_smith_wink_pixelized.png";
 
-  // Switch headshots on click
   $('#headshot').click(function() {
     let currentSrc = $('#headshot').attr('src');
     let newSrc = "";
