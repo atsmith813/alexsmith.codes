@@ -82,11 +82,13 @@ nav {
 
 .circle-image {
   height: auto;
-  width: 100%;
+  width: 60%;
   border-radius: 50%;
   -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
   -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
+  display: block;
+  margin: auto;
 }
 
 .contact-text,
@@ -190,6 +192,10 @@ nav {
 @media (max-width: 768px) {
   .container-fluid {
     padding-top: 0rem;
+  }
+
+  .circle-image {
+    width: 100%;
   }
 
   #books {
