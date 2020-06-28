@@ -19,8 +19,12 @@ ul, li {
   font-weight: 200;
 }
 
-a, a:hover {
+a {
   color: $theme-teal;
+}
+
+a:hover {
+  color: $watermelon;
 }
 
 nav {
@@ -41,7 +45,7 @@ nav {
   }
 
   a:hover {
-    color: $theme-teal;
+    color: $watermelon;
   }
 
   .dropdown-item.active,
@@ -56,7 +60,7 @@ nav {
     }
 
     a:hover {
-      color: $theme-teal;
+      color: $watermelon;
       background-color: white;
     }
   }
@@ -161,6 +165,10 @@ nav {
 
 .progress-bar {
   background-color: $theme-teal;
+}
+
+.progress-bar:hover {
+  background-color: $watermelon;
 }
 
 .graph {
