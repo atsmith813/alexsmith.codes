@@ -34,7 +34,7 @@ $(document).ready(function() {
   const winkingPixelizedHeadshot = "/images/alex_smith_wink_pixelized.png";
 
   $('#headshot').click(function() {
-    let currentSrc = $('#headshot').attr('src');
+    const currentSrc = $('#headshot').attr('src');
     let newSrc = "";
 
     if (currentSrc.includes('pixelized')) {
