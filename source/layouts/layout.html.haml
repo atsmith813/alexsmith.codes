@@ -66,10 +66,9 @@
 
     %title Alex | Software Engineer
 
-  %body
+  %body.container-fluid
     = partial 'partials/top_nav_bar'
     = partial 'partials/mobile_nav_bar'
-    .container-fluid
-      = yield
-      = partial 'partials/footer'
-      = google_analytics_tag
+    = yield
+    = partial 'partials/footer'
+    = google_analytics_tag
