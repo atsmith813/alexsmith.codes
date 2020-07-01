@@ -1,6 +1,6 @@
 $(document).ready(function() {
   // TypeIt
-  var type_text = [
+  const TYPE_TEXT = [
     'Hard-working',
     'Genuine',
     'Unanticipated',
@@ -22,65 +22,28 @@ $(document).ready(function() {
   ];
 
   new TypeIt('#type-text', {
-    strings: type_text,
+    strings: TYPE_TEXT,
     breakLines: false,
     lifeLike: true,
     loop: true
   });
 
-  // Scrollbar for side nav
-  $('#sidebar').mCustomScrollbar({
-    theme: 'minimal'
-  });
-
-  // Menu button
-  $('#sidebarCollapse').on('click', function () {
-    $('#sidebar, #content').toggleClass('active');
-    $('.collapse.in').toggleClass('in');
-    $('a[aria-expanded=true]').attr('aria-expanded', 'false');
-    $(this).toggleClass('active');
-  });
-
-  // Hide menu button until page is scrolled
-  var navbarCollapse = function() {
-    if ($(window).scrollTop() > 150) {
-      $('#sidebarCollapse').show();
-    } else {
-      $('#sidebarCollapse').hide();
-    }
-  };
-
-  // Hide menu button now if page is at the top
-  navbarCollapse();
-
-  // Hide menu button when page is scrolled
-  $(window).scroll(navbarCollapse);
-
-  // Closes responsive menu when an item is clicked
-  // Adds active class to selected menu item
-  $('.nav-item').click(function() {
-    $('.nav-item').removeClass('active');
-    $(this).addClass('active');
-    $('.navbar-collapse').collapse('hide');
-  });
-
-
   // Switch headshots on click
+  const headshot = "/images/headshot_teal_bg.jpg";
+  const pixelizedHeadshot = "/images/alex_smith_pixelized.png";
+  const winkingPixelizedHeadshot = "/images/alex_smith_wink_pixelized.png";
+
   $('#headshot').click(function() {
-    var currentSrc = $('#headshot').attr('src');
+    const currentSrc = $('#headshot').attr('src');
     var newSrc = "";
-    var tippyContent = "";
 
     if (currentSrc.includes('pixelized')) {
-      newSrc = "/images/headshot.jpeg";
-      tippyContent = "<p><b>Click to see me pixelated!</b></p><p><em>If you'd like a pixelated image of yourself, check out <a href='https://instagram.com/awacatoo'>@awacatoo</a> on Instagram</em></p>";
+      newSrc = headshot;
     } else {
-      newSrc = "/images/alex_smith_pixelized.png";
-      tippyContent = "<p><b>Click to see the real me!</b></p><p><em>If you'd like a pixelated image of yourself, check out <a href='https://instagram.com/awacatoo'>@awacatoo</a> on Instagram</em></p>";
+      newSrc = pixelizedHeadshot;
     }
 
     $('#headshot').attr('src', newSrc);
-    tippyHeadShot.setContent(tippyContent);
   });
 
   // Wink headshot every 5 seconds on mobile
@@ -89,36 +52,44 @@ $(document).ready(function() {
   }
 
   function winkHeadshot() {
-    var currentPath = $('#headshot').attr('src');
+    const currentPath = $('#headshot').attr('src');
 
-    if(currentPath == '/images/alex_smith_pixelized.png') {
-      $('#headshot').attr('src', '/images/alex_smith_wink_pixelized.png');
+    if(currentPath == pixelizedHeadshot) {
+      $('#headshot').attr('src', winkingPixelizedHeadshot);
       setTimeout(unwinkHeadshot, 700);
     }
   }
 
   function unwinkHeadshot() {
-    var currentPath = $('#headshot').attr('src');
+    const currentPath = $('#headshot').attr('src');
 
-    if(currentPath == '/images/alex_smith_wink_pixelized.png') {
-      $('#headshot').attr('src', '/images/alex_smith_pixelized.png');
+    if(currentPath == headshot) {
+      $('#headshot').attr('src', pixelizedHeadshot);
     }
   }
 
   // Wink on hover
   $('#headshot').hover(function() {
     if ($(this).attr('src').includes('pixelized')){
-      $(this).attr('src', '/images/alex_smith_wink_pixelized.png');
+      $(this).attr('src', winkingPixelizedHeadshot);
     }
   }, function () {
     if ($(this).attr('src').includes('wink')){
-      $(this).attr('src', '/images/alex_smith_pixelized.png');
+      $(this).attr('src', pixelizedHeadshot);
     }
   });
 
-  // Tooltip headshot
-  const tippyHeadShot = tippy(document.querySelector('#headshot'), {
-    interactive: true,
-    theme: 'light'
+  // Active menu item highlighting
+  function updateActiveNav(currentHref) {
+    $('.navbar a.active').removeClass('active');
+    const currentLocation = "/".concat(currentHref.split("/").pop());
+    const parentTarget = currentLocation.split("#").shift();
+    $('.navbar a[href="' + parentTarget + '"], .navbar a[href="' + currentLocation + '"]').addClass('active');
+  }
+
+  $('.navbar a').click(function() {
+    updateActiveNav(this.href);
   });
+
+  updateActiveNav(location.href);
 });

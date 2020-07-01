@@ -1,0 +1,118 @@
+#hobbies.pt-5
+  .row
+  .row.my-5
+    .col-8.offset-2
+      %h3
+        Hobbies
+      %p
+        Hobbies can be so vague...I like to think of this section as answers to
+        the question of, "what are some things that you would go out of your
+        way to do in your free time?". But that's not a cool title so I still
+        call these hobbies instead.
+      %p
+        .row
+          .col.col-md-6.col-xs-6
+            %p Skydiving
+            %p Cars
+            %p Computers
+            %p Volleyball
+            %p Playing the drums
+          .col.col-md-6.col-xs-6
+            %p Music / speakers
+            %p Golf
+            %p Board games
+            %p Social justice
+            %p Hiking
+#books
+  .row
+    .col-10.offset-1
+      %hr
+  .row.my-5
+    .col-8.offset-2
+      %h3
+        Books
+      %p
+        Here are some of my favorite books that I've read (in no particular order).
+      #bookCarousel.carousel.slide.d-block.d-md-none{"data-ride" => "carousel"}
+        .carousel-inner
+          - data.books.each_with_index do |book, index|
+            .carousel-item{ class: ('active' if index == 0) }
+              .dark-overlay
+                = image_tag("/images/books/#{book.image_name}",
+                  class: 'dark-overlay d-block w-100',
+                  alt: "#{book.title} book cover")
+        %a.carousel-control-prev{ "data-slide" => "prev", href: "#bookCarousel", role: "button" }
+          %span.carousel-control-prev-icon{"aria-hidden" => "true"}
+          %span.sr-only Previous
+        %a.carousel-control-next{ "data-slide" => "next", href: "#bookCarousel", role: "button" }
+          %span.carousel-control-next-icon{ "aria-hidden" => "true" }
+          %span.sr-only Next
+      .card-columns.d-none.d-md-block
+        - data.books.each do |book|
+          .card
+            - book_cover_image = image_tag("/images/books/#{book.image_name}",
+              class: 'card-img-top book-img',
+              alt: "#{book.title} book cover")
+
+            = link_to(book_cover_image, book.amazon_url, target: '_blank')
+
+            .card-body
+              %p.card-title.font-weight-bold
+                = book.title
+              %p.card-text.font-italic
+                = "by #{book.author}"
+#music
+  .row
+    .col-10.offset-1
+      %hr
+  .row.my-5
+    .col-8.offset-2
+      %h3
+        Favorite music artists
+      %p
+        According to my Spotify analytics my top artist for 2019 was a band
+        called Our Last Night. 68% of my time is spent listening to rap and
+        hip-hop. This (loosely) translates to my rock music selections being
+        more specific, given a rock band was my top artist last year.
+      %p
+        Here are some of my favorite music artists**:
+        .row
+          .col.col-md-6.col-xs-6
+            %p Our Last Night
+            %p Bring Me The Horizon
+            %p Migos
+            %p Future
+            %p Lil Skies
+            %p Lil Wayne*
+            %p Drake
+            %p Blink 182
+            %p Travis Scott*
+            %p Kane Brown
+            %p Gucci Mane*
+            %p Khalid
+            %p Louis The Child*
+            %p Avicii
+            %p TroyBoi*
+            %p Illenium*
+          .col.col-md-6.col-xs-6
+            %p Nirvana
+            %p Diplo*
+            %p A Day To Remember
+            %p Green Day
+            %p Linkin Park
+            %p Sum 41
+            %p Lil Baby
+            %p Da Baby
+            %p Torey Lanez*
+            %p Justin Bieber
+            %p Flume*
+            %p MGK
+            %p Young Thug
+            %p Halsey
+            %p Roddy Ricch
+            %p Red Hot Chili Peppers*
+      %p
+        %small.font-italic.text-muted
+          * I've seen them perform live.
+          %br
+          ** This is not, by any means, a full list.
