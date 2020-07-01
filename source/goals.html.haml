@@ -1,31 +1,31 @@
-.section
-.row
-  .col-12.col-md-8.offset-md-2
-    %h3
-      Goals
-    %p
-      I'm very goal oriented and I thrive on checklists. Here you can see some
-      of my success and failures in reaching gaols that I set.
-    %br
-    %p
-      %h5.text-center 2018
-      %br
-      - goals2018 = data.goals.select { |goal| goal.year == "2018" }
-      = partial('partials/goals_table', locals: { goals: goals2018 })
-      %br
-      %br
-      %h5.text-center 2019
+#goals.pt-5
+  .row
+  .row.my-5
+    .col-8.offset-2
+      %h3
+        Goals
       %p
-        They say,
-        %em "life is what happens when you're busy making other plans".
-        Life got in the way a little bit in the way this year. I was on vacation
-        when I had an accident on the Maderas Volcano on Ometepe Island in Nicaragua.
-        I snapped my collar bone and had to have surgery to put a 5-inch titanium
-        plate and 8 screws into my shoulder. This threw quite the wrench in my plans.
+        I'm very goal oriented and I thrive on checklists. Here you can see some
+        of my success and failures in reaching goals that I set.
       %br
-      - goals2019 = data.goals.select { |goal| goal.year == "2019" }
-      = partial('partials/goals_table', locals: { goals: goals2019 })
-      %br
-      %br
-      = partial 'partials/future'
-= partial 'partials/footer'
+      %p
+        .h5.text-center 2018
+        %br
+        - goals2018 = data.goals.select { |goal| goal.year == "2018" }
+        = partial('partials/goals_table', locals: { goals: goals2018 })
+        %br
+        %br
+        .h5.text-center 2019
+        %p
+          They say,
+          %em "life is what happens when you're busy making other plans".
+          Life got in the way a little bit in the way this year. I was on vacation
+          when I had an accident on the Maderas Volcano on Ometepe Island in Nicaragua.
+          I snapped my collar bone and had to have surgery to put a 5-inch titanium
+          plate and 8 screws into my shoulder. This threw quite the wrench in my plans.
+        %br
+        - goals2019 = data.goals.select { |goal| goal.year == "2019" }
+        = partial('partials/goals_table', locals: { goals: goals2019 })
+        %br
+        %br
+        = partial 'partials/future'
