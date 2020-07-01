@@ -6,7 +6,6 @@ body {
   position: relative;
 }
 
-
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Work Sans', sans-serif;
 }
@@ -46,7 +45,6 @@ nav {
     .nav-link.active {
       color: $theme-teal;
     }
-
   }
 
   a:hover {
@@ -83,16 +81,6 @@ nav {
   padding-top: 4rem;
 }
 
-.quote,
-.copy-source {
-  font-style: italic;
-  font-weight: bold;
-}
-
-.section {
-  margin: 3em 0em;
-}
-
 #books {
   .card-columns {
     column-count: 6;
@@ -105,7 +93,7 @@ nav {
 
 .circle-image {
   height: auto;
-  width: 60%;
+  width: 80%;
   border-radius: 50%;
   -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
   -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
@@ -114,22 +102,15 @@ nav {
   margin: auto;
 }
 
-.contact-text,
-.about-me-text {
-  font-weight: normal;
-}
-
-.contact-text {
-  margin-top: 1.5em;
-}
-
 .social-media-icon-links {
   a {
     color: inherit;
   }
+
   a:hover {
     text-decoration: none;
   }
+
   i {
     margin: 0.5em;
   }
@@ -144,28 +125,10 @@ nav {
   opacity: 1;
 }
 
-.about-me-quote,
-.testimonial-quote {
-  font-style: italic;
+.about-me-quote {
   i {
     color: #B3B3B2FF;
   }
-}
-
-.about-me-quote {
-  margin-top: 1.0em;
-}
-
-#justice-video iframe {
-  width: 100%;
-}
-
-.testimonial-quote {
-  margin-top: 2.0em;
-}
-
-.question {
-  font-weight: bold;
 }
 
 .table th {
@@ -185,40 +148,16 @@ nav {
   height: auto;
 }
 
-.role {
-  font-weight: 200;
-}
-
-.company {
-  font-weight: bold;
-}
-
 #experience-links {
   a:hover {
     text-decoration: none;
   }
 }
 
-#resume-contact-btn {
-  margin-top: 2em;
-}
-
-/* CONTENT STYLE */
-#content {
-  width: calc(100% - 250px);
-  padding: 0px 40px 40px 40px;
-  transition: all 0.3s;
-}
-
-
 /* MEDIAQUERIES */
 @media (max-width: 768px) {
   .circle-image {
     width: 100%;
-  }
-
-  #content {
-    width: calc(100% - 250px);
   }
 }
 

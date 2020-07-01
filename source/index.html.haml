@@ -1,24 +1,24 @@
-#content.row
-  .col-md-10.offset-md-2
-    .section.banner
+#content.my-5
+  .row.d-flex.flex-wrap.align-items-center
+    .col-md-10.offset-md-1
       .row
-        .col-md-6.col-sm-12
+        .col-md-6.col-sm-12.mb-5
           = image_tag 'alex_smith_pixelized.png',
             id: 'headshot',
-            class: 'circle-image mb-3',
+            class: 'circle-image',
             alt: 'Headshot of Alex Smith',
             data: { "tippy-content" => "<b>Click to see the real me!</b>" }
         .col-md-6.col-sm-12
-          .font-weight-bold.theme-teal-text.display-3.block
+          %h1.font-weight-bold.theme-teal-text.block
             Alex Smith
-          .h4.text-muted
+          %h4.text-muted
             Software Engineer
           .my-5
-            %p.h2
+            %p.h4
               I've been called many things...
-            %p.h2.font-weight-bold.font-italic.theme-teal-text#type-text
+            %h3.font-weight-bold.font-italic.theme-teal-text#type-text
           .my-5
-            %h3.mt-10.font-weight-bold.theme-teal-text
+            %h5.mt-10.font-weight-bold.theme-teal-text
               TLDR
             %p
               A borderline cold brew coffee addict and a Florida native
