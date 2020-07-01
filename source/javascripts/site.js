@@ -1,6 +1,6 @@
 $(document).ready(function() {
   // TypeIt
-  let type_text = [
+  const TYPE_TEXT = [
     'Hard-working',
     'Genuine',
     'Unanticipated',
@@ -22,7 +22,7 @@ $(document).ready(function() {
   ];
 
   new TypeIt('#type-text', {
-    strings: type_text,
+    strings: TYPE_TEXT,
     breakLines: false,
     lifeLike: true,
     loop: true
