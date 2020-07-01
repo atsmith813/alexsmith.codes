@@ -1,46 +1,47 @@
-#content.active
-.section.banner
-  .row
-    .col-md-6.col-sm-12
-      = image_tag 'alex_smith_pixelized.png',
-        id: 'headshot',
-        class: 'circle-image mb-3',
-        alt: 'Headshot of Alex Smith',
-        data: { "tippy-content" => "<b>Click to see the real me!</b>" }
-    .col-md-6.col-sm-12
-      .font-weight-bold.theme-teal-text.display-3.block
-        Alex Smith
-      .h4.text-muted
-        Software Engineer
-      .my-5
-        %p.h2
-          I've been called many things...
-        %p.h2.font-weight-bold.font-italic.theme-teal-text#type-text
-      .my-5
-        %h3.mt-10.font-weight-bold.theme-teal-text
-          TLDR
-        %p
-          A borderline cold brew coffee addict and a Florida native
-          currently residing in Tampa, Florida, my name is Alexander Smith
-          (Alex). If I had to describe a
-          %em "personal mission statement"
-          , I'd say that mine is to provide others with opportunities -
-          especially if it helps them move up the so-called socio-economic
-          ladder.
-        %p
-          While I call Tampa home, I was born in Baltimore, MD and I've
-          been to Germany more times than my fingers permit me to count
-          (I'm Black and German). Want to learn more? You can read more
-          about...
-        %p
-          %a{ href: '#past' } How I went from flipping burgers at the neighborhood DQ to Wall Street.
-        %p
-          %a{ href: '#present' } How I retired from being a corporate mercenary and became a Full-Stack Developer at a startup.
-        %p
-          %a{ href: '#future' } What I'm working towards next.
-        %p
-          And while we're still talking about me, you can
-          %a{ href: 'https://hirealexsmith.com' } hire me
-          to help
-          = succeed '!' do
-            %span.font-italic you
+#content.row
+  .col-md-10.offset-md-2
+    .section.banner
+      .row
+        .col-md-6.col-sm-12
+          = image_tag 'alex_smith_pixelized.png',
+            id: 'headshot',
+            class: 'circle-image mb-3',
+            alt: 'Headshot of Alex Smith',
+            data: { "tippy-content" => "<b>Click to see the real me!</b>" }
+        .col-md-6.col-sm-12
+          .font-weight-bold.theme-teal-text.display-3.block
+            Alex Smith
+          .h4.text-muted
+            Software Engineer
+          .my-5
+            %p.h2
+              I've been called many things...
+            %p.h2.font-weight-bold.font-italic.theme-teal-text#type-text
+          .my-5
+            %h3.mt-10.font-weight-bold.theme-teal-text
+              TLDR
+            %p
+              A borderline cold brew coffee addict and a Florida native
+              currently residing in Tampa, Florida, my name is Alexander Smith
+              (Alex). If I had to describe a
+              %em "personal mission statement"
+              , I'd say that mine is to provide others with opportunities -
+              especially if it helps them move up the so-called socio-economic
+              ladder.
+            %p
+              While I call Tampa home, I was born in Baltimore, MD and I've
+              been to Germany more times than my fingers permit me to count
+              (I'm Black and German). Want to learn more? You can read more
+              about...
+            %p
+              %a{ href: '#past' } How I went from flipping burgers at the neighborhood DQ to Wall Street.
+            %p
+              %a{ href: '#present' } How I retired from being a corporate mercenary and became a Full-Stack Developer at a startup.
+            %p
+              %a{ href: '#future' } What I'm working towards next.
+            %p
+              And while we're still talking about me, you can
+              %a{ href: 'https://hirealexsmith.com' } hire me
+              to help
+              = succeed '!' do
+                %span.font-italic you
