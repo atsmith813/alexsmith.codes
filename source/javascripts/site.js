@@ -35,7 +35,7 @@ $(document).ready(function() {
 
   $('#headshot').click(function() {
     const currentSrc = $('#headshot').attr('src');
-    let newSrc = "";
+    var newSrc = "";
 
     if (currentSrc.includes('pixelized')) {
       newSrc = headshot;
@@ -52,7 +52,7 @@ $(document).ready(function() {
   }
 
   function winkHeadshot() {
-    let currentPath = $('#headshot').attr('src');
+    const currentPath = $('#headshot').attr('src');
 
     if(currentPath == pixelizedHeadshot) {
       $('#headshot').attr('src', winkingPixelizedHeadshot);
@@ -61,7 +61,7 @@ $(document).ready(function() {
   }
 
   function unwinkHeadshot() {
-    let currentPath = $('#headshot').attr('src');
+    const currentPath = $('#headshot').attr('src');
 
     if(currentPath == headshot) {
       $('#headshot').attr('src', pixelizedHeadshot);
@@ -82,9 +82,9 @@ $(document).ready(function() {
   // Active menu item highlighting
   function updateActiveNav(currentHref) {
     $('.navbar a.active').removeClass('active');
-    let currentLocation = "/".concat(currentHref.split("/").pop());
-    let parentTarget = currentLocation.split("#").shift();
-    $(`.navbar a[href="${parentTarget}"], .navbar a[href="${currentLocation}"]`).addClass('active');
+    const currentLocation = "/".concat(currentHref.split("/").pop());
+    const parentTarget = currentLocation.split("#").shift();
+    $('.navbar a[href="' + parentTarget + '"], .navbar a[href="' + currentLocation + '"]').addClass('active');
   }
 
   $('.navbar a').click(function() {
