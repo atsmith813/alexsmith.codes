@@ -46,9 +46,9 @@ $(document).ready(function() {
     $('#headshot').attr('src', newSrc);
   });
 
-  // Wink headshot every 5 seconds on mobile
-  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
-    setInterval(winkHeadshot, 6000);
+  // Wink headshot every 3 seconds on mobile
+  if(/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+    setInterval(winkHeadshot, 3000);
   }
 
   function winkHeadshot() {
@@ -63,7 +63,7 @@ $(document).ready(function() {
   function unwinkHeadshot() {
     const currentPath = $('#headshot').attr('src');
 
-    if(currentPath == headshot) {
+    if(currentPath == winkingPixelizedHeadshot) {
       $('#headshot').attr('src', pixelizedHeadshot);
     }
   }
