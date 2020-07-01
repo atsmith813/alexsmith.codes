@@ -1,0 +1,48 @@
+#past.pt-5
+  .row
+  .row.my-5
+    .col-8.offset-2
+      %h3
+        Where I've been
+      %p.about-me-quote.font-italic
+        %i.fa.fa-quote-left.fa-3x.fa-pull-left
+        You don't know where you're going until you know where you've been.
+      %br
+      %p.font-weight-normal
+        = partial 'partials/past'
+#present
+  .row
+    .col-10.offset-1
+      %hr
+  .row.my-5
+    .col-8.offset-2
+      %h3
+        Where I am
+      %p.about-me-quote.font-italic
+        %i.fa.fa-quote-left.fa-3x.fa-pull-left
+        Our DNA is 96% chimpanzee. Is that even worth arguing?! If I gave
+        you a sandwich that was filled with 96% sh*t and 4% ham, would you
+        be willing to consider that a ham sandwich? So If you ever start
+        taking things too seriously, just remember that we are talking monkeys
+        on an organic spaceship flying through the universe. - Joe Rogan
+      %br
+      %p.font-weight-normal
+        = partial 'partials/present'
+#future
+  .row
+    .col-10.offset-1
+      %hr
+  .row.my-5
+    .col-8.offset-2
+      %h3
+        Where I'm going
+      %p.about-me-quote.font-italic
+        %i.fa.fa-quote-left.fa-3x.fa-pull-left
+        I don't regret the things I've done, only the things I've never tried.
+      %br
+      %p
+        = partial 'partials/future'
+      %br
+      %p.font-italic
+        %a{ href: '/goals' } Here
+        you can see past goals and progress.

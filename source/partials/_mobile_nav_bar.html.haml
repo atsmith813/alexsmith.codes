@@ -1,22 +1,11 @@
-%nav#mobileNav.navbar.navbar-expand-lg.navbar-light.fixed-top.py-3.d-md-none.d-lg-none.d-xl-none
-  .container-fluid
-    %button.navbar-toggler.navbar-toggler-left{ 'aria-controls' => 'navbarResponsive', 'aria-expanded' => 'false', 'aria-label' => 'Toggle navigation', 'data-target' => '#navbarResponsive', 'data-toggle' => 'collapse', type: 'button' }
-      %span.navbar-toggler-icon
-    #navbarResponsive.collapse.navbar-collapse
-      %ul.navbar-nav.ml-auto.my-2.my-lg-0
-        %li.nav-item
-          %a.nav-link{ href: '#about' } Summary
-        %li.nav-item
-          %a.nav-link{ href: '#past' } Past
-        %li.nav-item
-          %a.nav-link{ href: '#present' } Present
-        %li.nav-item
-          %a.nav-link{ href: '#future' } Future
-        %li.nav-item
-          %a.nav-link{ href: '#interests' } Interests
-        %li.nav-item
-          %a.nav-link{ href: '/alex_smith_resume.pdf', target: '_blank' } Resume / CV
-        %li.nav-item
-          %a.nav-link{ href: 'mailto:workwithalexsmith@gmail.com', target: '_blank' } Contact Me
-        %li.nav-item
-          %a.nav-link{ href: 'https://hirealexsmith.com', target: '_blank' } Work With Me
+%nav.navbar.navbar-expand-lg.bg-white.fixed-top.d-md-none
+  .navbar-brand
+  %button.navbar-toggler{ 'aria-controls' => 'mobileNavBar', 'aria-expanded' => 'false', 'aria-label' => 'Toggle navigation', 'data-target' => '#mobileNavBar', 'data-toggle' => 'collapse', type: 'button' }
+    %span.navbar-toggler-icon
+  #mobileNavBar.collapse.navbar-collapse
+    .navbar-nav
+      %a.nav-item.nav-link.rounded.font-weight-bold{ href: '/' } Home
+      %a.nav-item.nav-link.rounded.font-weight-bold{ href: '/about' } About
+      %a.nav-item.nav-link.rounded.font-weight-bold{ href: '/experience' } Experience
+      %a.nav-item.nav-link.rounded.font-weight-bold{ href: '/interests' } Interests
+      %a.nav-item.nav-link.rounded.font-weight-bold{ href: '/alex_smith_resume.pdf', target: '_blank' } Resume / CV

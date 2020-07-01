@@ -1,0 +1,13 @@
+#experience.pt-5
+  .row
+  .row.my-5
+    .col-md-8.offset-md-2.col-sm-12
+      %h3
+        Quick timeline of professional experience
+      %p
+        Clicking on the company titles will take you to the section of my
+        story describing the position. You can also check out my resume
+        = succeed "." do
+          %a{ href: '/alex_smith_resume.pdf', target: '_blank' } here
+        = partial 'partials/experience_links'
+
