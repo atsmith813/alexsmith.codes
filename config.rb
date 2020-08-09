@@ -5,8 +5,6 @@ activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
 end
 
-activate :directory_indexes
-
 activate :google_analytics do |ga|
   ga.tracking_id = 'UA-115884969-2'
 end
