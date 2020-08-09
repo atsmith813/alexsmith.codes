@@ -7,7 +7,8 @@
         %a.dropdown-item{ href: '/about#past'} Past
         %a.dropdown-item{ href: '/about#present'} Present
         %a.dropdown-item{ href: '/about#future'} Goals
-    %a.nav-item.nav-link.rounded.font-weight-bold{ href: '/experience' } Experience
+    -#%a.nav-item.nav-link.rounded.font-weight-bold{ href: '/experience' } Experience
+    = link_to "Experience", "/experience.html", class: 'nav-item nav-link rounded font-weight-bold'
     .nav-item.dropdown
       %a#interestsDropdownMenuLink.nav-link.dropdown-toggle.rounded.font-weight-bold{ 'aria-expanded' => 'false', 'aria-haspopup' => 'true', href: '/interests' } Interests
       .dropdown-menu{ 'aria-labelledby' => 'interestsDropdownMenuLink' }
