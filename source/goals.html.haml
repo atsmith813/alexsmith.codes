@@ -28,4 +28,12 @@
         = partial('partials/goals_table', locals: { goals: goals2019 })
         %br
         %br
+        .h5.text-center 2020
+        %p
+          This year I tried something a little different by setting quarterly goals.
+        %br
+        - goals2020 = data.goals.select { |goal| goal.year == "2020" }
+        = partial('partials/goals_table', locals: { goals: goals2020 })
+        %br
+        %br
         = partial 'partials/future'
